@@ -4,10 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import tn.esprit.ms.DAO.Entities.Produit;
 import tn.esprit.ms.DAO.Repository.CategorieRepository;
 import tn.esprit.ms.DAO.Repository.ProduitRepository;
-
+@EnableEurekaClient
 @SpringBootApplication
 public class MsProjectApplication implements CommandLineRunner {
 
