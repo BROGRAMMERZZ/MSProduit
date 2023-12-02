@@ -11,20 +11,20 @@ import tn.esprit.ms.DAO.Repository.ProduitRepository;
 @EnableEurekaClient
 @SpringBootApplication
 public class MsProjectApplication implements CommandLineRunner {
-
-    private final ProduitRepository produitRepository;
-    private final CategorieRepository categorieRepository;
     @Autowired
-    public MsProjectApplication(ProduitRepository produitRepository,CategorieRepository categorieRepository){
+    private  ProduitRepository produitRepository;
+    private  CategorieRepository categorieRepository;
+
+   /* public MsProjectApplication(ProduitRepository produitRepository,CategorieRepository categorieRepository){
         this.produitRepository=produitRepository;
         this.categorieRepository=categorieRepository;
-    }
+    }*/
 
     public static void main(String[] args) {
         SpringApplication.run(MsProjectApplication.class, args);
     }
 
-    @Override
+    /*@Override
     public void run(String... args) throws Exception {
         if(produitRepository.findAll().isEmpty()){
             produitRepository.save(new Produit("P","description",800,""));
@@ -32,5 +32,9 @@ public class MsProjectApplication implements CommandLineRunner {
         for(Produit produit : produitRepository.findAll()){
             System.out.println(produit);
         }
+    }*/
+    @Override
+    public void run(String... args) throws Exception {
+        // La méthode run est désormais vide
     }
 }

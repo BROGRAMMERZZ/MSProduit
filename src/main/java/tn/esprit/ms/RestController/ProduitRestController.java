@@ -10,7 +10,7 @@ import tn.esprit.ms.Services.IProduitService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ProduitsRest")
+@RequestMapping("/produits/ProduitsRest/")
 public class ProduitRestController {
     private  IProduitService produitService;
 
